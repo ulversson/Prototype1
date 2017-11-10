@@ -13,7 +13,7 @@ namespace Prototype1.Models
         public string Description { get; set; }
 
         public Patient Patient { get; set; }
-        public DiagnosisType DiagnosisTypes { get; set; }
-        public DiagnosisCategory DiagnosisCategories { get; set; }
+        public DiagnosisType DiagnosisType { get; set; }
+        public DiagnosisCategory DiagnosisCategory { get; set; }
     }
 }
