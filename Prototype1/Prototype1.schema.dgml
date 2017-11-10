@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Database" Category="Database" Bounds="-169,-211.379649947036,762.13,545.76132778591" Group="Expanded" Label="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Prototype1.mdf;Integrated Security=True;Connect Timeout=30" UseManualLocation="True" />
+    <Node Id="dbo" Category="Schema" Bounds="-122.4175,-171.379549947036,668.965,485.76112778591" Group="Expanded" Label="dbo" UseManualLocation="True" />
+    <Node Id="dbo.DiagnosisCategory" Category="Table" Bounds="-102.417499440511,124.480886171282,163.113333333333,141.9203" Group="Expanded" Label="dbo.DiagnosisCategory" />
+    <Node Id="dbo.DiagnosisCategory_CategoryName" Category="Field Optional" Bounds="-70.6874988810221,220.441086171282,99.6533333333333,25.96" Description="ntext" Label="CategoryName" />
+    <Node Id="dbo.DiagnosisCategory_ID" Category="Field Primary" Bounds="-70.6875,164.480986171282,50,25.96" Description="int" Label="ID" />
+    <Node Id="dbo.DiagnosisTypes" Category="Table" Bounds="91.3025001525879,124.480886171289,145.673333333333,141.9203" Group="Expanded" Label="dbo.DiagnosisTypes" />
+    <Node Id="dbo.DiagnosisTypes_ID" Category="Field Primary" Bounds="138.290832519531,164.480986171289,50,25.96" Description="int" Label="ID" />
+    <Node Id="dbo.DiagnosisTypes_Name" Category="Field Optional" Bounds="138.290834452311,220.441086171289,51.6966666666667,25.96" Description="ntext" Label="Name" />
+    <Node Id="dbo.PatientDiagnosis" Category="Table" Bounds="15.4158260175917,-131.379422161119,297.446689503988,197.8804" Group="Expanded" Label="dbo.PatientDiagnosis" />
+    <Node Id="dbo.PatientDiagnosis_Description" Category="Field Optional" Bounds="212.609182188246,-91.379124144762,80.2533333333333,25.96" Description="ntext" Label="Description" />
+    <Node Id="dbo.PatientDiagnosis_DiagnosisCategoryId" Category="Field Foreign" Bounds="35.4158342488607,20.5408778388806,129.623333333333,25.96" Description="int" Label="DiagnosisCategoryId" />
+    <Node Id="dbo.PatientDiagnosis_DiagnosisTypeId" Category="Field Foreign" Bounds="35.4158287811279,-35.4192221611195,107.09,25.96" Description="int" Label="DiagnosisTypeId" />
+    <Node Id="dbo.PatientDiagnosis_ID" Category="Field Primary" Bounds="35.4158278486464,-91.3793221611195,50,25.96" Description="int" Label="ID" />
+    <Node Id="dbo.PatientDiagnosis_PatientId" Category="Field Foreign" Bounds="115.415827848646,-91.3793221611195,67.1933333333333,25.96" Description="int" Label="PatientId" />
+    <Node Id="dbo.Patients" Category="Table" Bounds="267.730834350586,96.5010778388736,258.816659138997,197.8804" Group="Expanded" Label="dbo.Patients" />
+    <Node Id="dbo.Patients_DOB" Category="Field" Bounds="367.730834960938,136.501177838881,50,25.96" Description="datetime" Label="DOB" />
+    <Node Id="dbo.Patients_FirstName" Category="Field Optional" Bounds="390.344174601237,192.461277838881,73.7966666666667,25.96" Description="ntext" Label="FirstName" />
+    <Node Id="dbo.Patients_Gender" Category="Field Optional" Bounds="447.730826822917,136.501177838881,58.8166666666667,25.96" Description="ntext" Label="Gender" />
+    <Node Id="dbo.Patients_ID" Category="Field Primary" Bounds="287.730834960938,136.501177838874,50,25.96" Description="int" Label="ID" />
+    <Node Id="dbo.Patients_LastName" Category="Field Optional" Bounds="287.730839436849,192.461277838874,72.6133333333333,25.96" Description="ntext" Label="LastName" />
+    <Node Id="dbo.Patients_RM2Number" Category="Field Optional" Bounds="287.730834350586,248.421377838881,88.03,25.96" Description="ntext" Label="RM2Number" />
+  </Nodes>
+  <Links>
+    <Link Source="Database" Target="dbo" Category="Contains" />
+    <Link Source="dbo" Target="dbo.DiagnosisCategory" Category="Contains" />
+    <Link Source="dbo" Target="dbo.DiagnosisTypes" Category="Contains" />
+    <Link Source="dbo" Target="dbo.PatientDiagnosis" Category="Contains" />
+    <Link Source="dbo" Target="dbo.Patients" Category="Contains" />
+    <Link Source="dbo.DiagnosisCategory" Target="dbo.DiagnosisCategory_CategoryName" Category="Contains" />
+    <Link Source="dbo.DiagnosisCategory" Target="dbo.DiagnosisCategory_ID" Category="Contains" />
+    <Link Source="dbo.DiagnosisTypes" Target="dbo.DiagnosisTypes_ID" Category="Contains" />
+    <Link Source="dbo.DiagnosisTypes" Target="dbo.DiagnosisTypes_Name" Category="Contains" />
+    <Link Source="dbo.PatientDiagnosis" Target="dbo.PatientDiagnosis_Description" Category="Contains" />
+    <Link Source="dbo.PatientDiagnosis" Target="dbo.PatientDiagnosis_DiagnosisCategoryId" Category="Contains" />
+    <Link Source="dbo.PatientDiagnosis" Target="dbo.PatientDiagnosis_DiagnosisTypeId" Category="Contains" />
+    <Link Source="dbo.PatientDiagnosis" Target="dbo.PatientDiagnosis_ID" Category="Contains" />
+    <Link Source="dbo.PatientDiagnosis" Target="dbo.PatientDiagnosis_PatientId" Category="Contains" />
+    <Link Source="dbo.PatientDiagnosis_DiagnosisCategoryId" Target="dbo.DiagnosisCategory_ID" Category="Foreign Key" Label="FK_PatientDiagnosis_DiagnosisCategory_DiagnosisCategoryId" />
+    <Link Source="dbo.PatientDiagnosis_DiagnosisTypeId" Target="dbo.DiagnosisTypes_ID" Category="Foreign Key" Label="FK_PatientDiagnosis_DiagnosisTypes_DiagnosisTypeId" />
+    <Link Source="dbo.PatientDiagnosis_PatientId" Target="dbo.Patients_ID" Category="Foreign Key" Label="FK_PatientDiagnosis_Patients_PatientId" />
+    <Link Source="dbo.Patients" Target="dbo.Patients_DOB" Category="Contains" />
+    <Link Source="dbo.Patients" Target="dbo.Patients_FirstName" Category="Contains" />
+    <Link Source="dbo.Patients" Target="dbo.Patients_Gender" Category="Contains" />
+    <Link Source="dbo.Patients" Target="dbo.Patients_ID" Category="Contains" />
+    <Link Source="dbo.Patients" Target="dbo.Patients_LastName" Category="Contains" />
+    <Link Source="dbo.Patients" Target="dbo.Patients_RM2Number" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="Database" />
+    <Category Id="Field" />
+    <Category Id="Field Foreign" />
+    <Category Id="Field Optional" />
+    <Category Id="Field Primary" />
+    <Category Id="Foreign Key" />
+    <Category Id="Schema" />
+    <Category Id="Table" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="Description" Label="Description" Description="Description" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Table" ValueLabel="True">
+      <Condition Expression="HasCategory('Table')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Schema" ValueLabel="True">
+      <Condition Expression="HasCategory('Schema')" />
+      <Setter Property="Background" Value="#FF7F9169" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="True">
+      <Condition Expression="HasCategory('Field')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Database" ValueLabel="True">
+      <Condition Expression="HasCategory('Database')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>

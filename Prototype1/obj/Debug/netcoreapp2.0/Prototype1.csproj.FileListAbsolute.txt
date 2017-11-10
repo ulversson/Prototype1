@@ -1,0 +1,11 @@
+C:\Users\user\source\repos\Prototype1\Prototype1\bin\Debug\netcoreapp2.0\Prototype1.deps.json
+C:\Users\user\source\repos\Prototype1\Prototype1\bin\Debug\netcoreapp2.0\Prototype1.runtimeconfig.json
+C:\Users\user\source\repos\Prototype1\Prototype1\bin\Debug\netcoreapp2.0\Prototype1.runtimeconfig.dev.json
+C:\Users\user\source\repos\Prototype1\Prototype1\bin\Debug\netcoreapp2.0\Prototype1.dll
+C:\Users\user\source\repos\Prototype1\Prototype1\bin\Debug\netcoreapp2.0\Prototype1.pdb
+C:\Users\user\source\repos\Prototype1\Prototype1\obj\Debug\netcoreapp2.0\Prototype1.csprojResolveAssemblyReference.cache
+C:\Users\user\source\repos\Prototype1\Prototype1\obj\Debug\netcoreapp2.0\Prototype1.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Prototype1\Prototype1\obj\Debug\netcoreapp2.0\Prototype1.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Prototype1\Prototype1\obj\Debug\netcoreapp2.0\Prototype1.AssemblyInfo.cs
+C:\Users\user\source\repos\Prototype1\Prototype1\obj\Debug\netcoreapp2.0\Prototype1.dll
+C:\Users\user\source\repos\Prototype1\Prototype1\obj\Debug\netcoreapp2.0\Prototype1.pdb
